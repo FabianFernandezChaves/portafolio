@@ -1,8 +1,6 @@
 "use client";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import Button from "@/components/ui/ProjectButton";
-import Card from "@/components/ui/ProjectCard";
+import {Navbar, Footer} from "@/components/layout";
+import { Button, Card } from "@/components/ui";
 import { Ecommerce, UCR, CINDEA, Uptask } from "@/public/images/projects";
 import {
   FaJava,

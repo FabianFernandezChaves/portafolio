@@ -28,13 +28,13 @@ export default function Navbar() {
         <div className="hidden md:flex w-fit gap-5 text-base">
           <Link
             href="/"
-            className={`transition ease-in-out hover:text-amber-500 hover:scale-110 ${isActive("/") ? "text-amber-500 font-semibold" : ""}`}
+            className={`transition ease-in-out hover:text-amber-500 ${isActive("/") ? "text-amber-500 font-semibold" : "hover:scale-110"}`}
           >
             About Me
           </Link>
           <Link
             href="/key-projects"
-            className={`transition ease-in-out hover:text-amber-500 hover:scale-110 ${isActive("/key-projects") ? "text-amber-500 font-semibold" : ""}`}
+            className={`transition ease-in-out hover:text-amber-500 ${isActive("/key-projects/") ? "text-amber-500 font-semibold" : "hover:scale-110 "}`}
           >
             Key Projects
           </Link>
@@ -97,13 +97,13 @@ export default function Navbar() {
         <div className="flex flex-col gap-5 items-center pt-5">
         <Link
             href="/"
-            className={`transition ease-in-out hover:text-amber-500 hover:scale-110 ${isActive("/") ? "text-amber-500 font-semibold" : ""}`}
+            className={`transition ease-in-out hover:text-amber-500 ${isActive("/") ? "text-amber-500 font-semibold" : "hover:scale-110 "}`}
           >
             About Me
           </Link>
           <Link
             href="/key-projects"
-            className={`transition ease-in-out hover:text-amber-500 hover:scale-110 ${isActive("/key-projects") ? "text-amber-500 font-semibold" : ""}`}
+            className={`transition ease-in-out hover:text-amber-500 ${isActive("/key-projects/") ? "text-amber-500 font-semibold" : "hover:scale-110 "}`}
           >
             Key Projects
           </Link>

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import profilePic from "@/public/images/Foto-Perfil.jpg";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import Hexagon from "@/components/ui/hexagon";
+import { Suspense } from "react";
+import profilePic from "@/public/images/Foto-Perfil.webp";
+import {Navbar, Footer} from "@/components/layout";
+import { Hexagon, LoadingSpinner } from "@/components/ui";
 import {
   FaLinkedinIn,
   FaGithub,
@@ -60,11 +60,12 @@ export default function Home() {
               </span>
               <div className="flex flex-wrap gap-4 items-center">
                 <a
-                  href="mailto:fabian.fernandezchaves@gmail.com"
+                  href="/pdf/Resume-FabianFernandez.pdf"
+                  download
                   className="p-2 px-4 text-amber-500 rounded-full bg-zinc-700 font-bold text-xs flex items-center gap-2 hover:transform ease-in-out duration-300 hover:scale-110"
                 >
                   <span className="material-symbols-outlined justify-center text-sm font-bold">
-                    Email{" "}
+                    Resume{" "}
                   </span>
                   <FaPaperPlane />
                 </a>
@@ -85,11 +86,13 @@ export default function Home() {
               </div>
             </div>
             {/* Proofile Image */}
-            <Image
-              src={profilePic}
-              alt="Profile Photo"
-              className="rounded-md m-auto w-full md:w-8/12"
-            />
+            <Suspense fallback={<LoadingSpinner />}>
+              <Image
+                src={profilePic}
+                alt="Profile Photo"
+                className="rounded-md m-auto w-full md:w-8/12"
+                priority 
+              /></Suspense>
           </div>
         </section>
         {/* Tech Stack */}

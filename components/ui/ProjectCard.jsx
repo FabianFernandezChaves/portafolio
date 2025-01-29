@@ -14,6 +14,7 @@ export default function ProjectCard({ image, children, date, customClass }) {
             src={image}
             alt="Project Image"
             className="rounded-md m-auto w-[20rem] h-[13rem] shadow-lg"
+            loading = 'lazy'
           />
           </Suspense>
         <div className="flex flex-wrap gap-2 w-full justify-end text-2xl text-amber-500">

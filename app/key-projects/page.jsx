@@ -1,6 +1,6 @@
 "use client";
-import {Navbar, Footer} from "@/components/layout";
-import { Button, Card } from "@/components/ui";
+import { Navbar, Footer } from "@/components/layout";
+import { Button, Card, ProjectDescription } from "@/components/ui";
 import { Ecommerce, UCR, CINDEA, Uptask } from "@/public/images/projects";
 import {
   FaJava,
@@ -32,8 +32,8 @@ export default function KeyProjects() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold uppercase content-center">
                 Highlighted Professional Projects
               </h1>
-              <div className="border-2 border-amber-500 border-opacity-30 p-10 bg-neutral-800 rounded-lg shadow-lg">
-                <div className="border-l-4 border-amber-500 pl-4 mt-4 text-lg">
+              <div className="border-2 border-amber-500 border-opacity-30 p-2 md:p-10 bg-neutral-800 rounded-lg shadow-lg">
+                <div className="border-l-4 border-amber-500 pl-4 md:mt-4 text-lg">
                   <span className="italic text-neutral-300 content-center">
                     I have contributed to impactful projects, from e-commerce
                     platforms to academic research. These experiences have
@@ -61,24 +61,21 @@ export default function KeyProjects() {
             </Card>
 
             {/* Description */}
-            <div className="grid content-center gap-5 md:col-span-3">
-              <h3 className="text-xl font-semibold text-amber-500">
-                Building a Scalable and High-Performance E-commerce Platform
-              </h3>
-              <span className="text-lg text-neutral-300">
-                In this e-commerce project, I focused on building dynamic and
-                responsive user interfaces using Next.js, React.js, and Tailwind
-                CSS, delivering a seamless and engaging user experience. I
-                integrated a Strapi-based API to efficiently manage product,
-                user, and inventory data, while implementing dynamic queries and
-                real-time features. Additionally, I optimized the platform’s
-                performance, ensuring fast load times and smooth navigation,
-                making the solution scalable and ready for growth.
-              </span>
-              <div className="flex flex-wrap gap-4 w-full text-right text-base font-semibold">
-                <Button title="View live" link="https://www.detinmarincr.com/"></Button>
-              </div>
-            </div>
+            <ProjectDescription
+              projectTitle="Building a Scalable and High-Performance E-commerce Platform"
+              description="In this e-commerce project, I focused on building dynamic and
+                      responsive user interfaces using Next.js, React.js, and
+                      Tailwind CSS, delivering a seamless and engaging user
+                      experience. I integrated a Strapi-based API to efficiently
+                      manage product, user, and inventory data, while implementing
+                      dynamic queries and real-time features. Additionally, I
+                      optimized the platform’s performance, ensuring fast load times
+                      and smooth navigation, making the solution scalable and ready
+                      for growth.
+                  "
+              buttonTitle="View live"
+              buttonLink="https://www.detinmarincr.com/"
+            />
           </div>
           {/* Item */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:place-items-center m-auto">
@@ -94,24 +91,19 @@ export default function KeyProjects() {
             </Card>
 
             {/* Description */}
-            <div className="grid content-center gap-5 md:col-span-3">
-              <h3 className="text-xl font-semibold text-amber-500">
-                Uncovering Patterns in Archaeological Data with Python
-              </h3>
-              <span className="text-lg text-neutral-300">
-                As a research assistant at the University of Costa Rica, I
-                contributed to the project "Discovering the Obeid Cemetery of
-                Eridu" by developing Python tools for data analysis and
+            <ProjectDescription
+              projectTitle="Uncovering Patterns in Archaeological Data with Python"
+              description="As a research assistant at the University of Costa Rica, I
+                contributed to the project 'Discovering the Obeid Cemetery of
+                Eridu' by developing Python tools for data analysis and
                 visualization. My work focused on clustering techniques,
                 statistical analysis to uncover patterns in archaeological data,
                 and creating clean, structured CSV databases. I also
                 collaborated with Sapienza University of Rome during a research
                 exchange in Italy, enhancing the project with advanced data
-                analysis insights.
-              </span>
-              <div className="flex flex-wrap gap-4 w-full text-right text-base font-semibold">
-              </div>
-            </div>
+                analysis insights."
+            />
+            
           </div>
           {/* Item */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:place-items-center m-auto">
@@ -123,22 +115,17 @@ export default function KeyProjects() {
               <FaBrain />
             </Card>
             {/* Description */}
-            <div className="grid content-center gap-5 md:col-span-3">
-              <h3 className="text-xl font-semibold text-amber-500">
-                Automating Data Extraction and Analysis with Python
-              </h3>
-              <span className="text-lg text-neutral-300">
-                As a research assistant for the “Gastrotico” project at the
+            <ProjectDescription
+              projectTitle="Automating Data Extraction and Analysis with Python"
+              description="As a research assistant for the “Gastrotico” project at the
                 University of Costa Rica, I automated data extraction processes
                 using the Selenium API in Python. I also developed Python
                 modules for automated text mining and machine learning,
                 leveraging Natural Language Processing (NLP) techniques to
-                analyze and extract insights from large datasets efficiently.
-              </span>
-              <div className="flex flex-wrap gap-4 w-full text-right text-base font-semibold">
-                <Button title="Information" link="https://srp.ucr.ac.cr/investigacion/proyectos-y-actividades-de-investigacion/gastrotico-observatorio-de-la-gastronomia-y-bebidas-de-interes-cultural-en-costa-rica/"></Button>
-              </div>
-            </div>
+                analyze and extract insights from large datasets efficiently."
+              buttonTitle="More information"
+              buttonLink="https://srp.ucr.ac.cr/investigacion/proyectos-y-actividades-de-investigacion/gastrotico-observatorio-de-la-gastronomia-y-bebidas-de-interes-cultural-en-costa-rica/"
+            />
           </div>
           {/* Item */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:place-items-center m-auto">
@@ -154,12 +141,9 @@ export default function KeyProjects() {
             </Card>
 
             {/* Description */}
-            <div className="grid content-center gap-5 md:col-span-3">
-              <h3 className="text-xl font-semibold text-amber-500">
-                Web-Based Enrollment System for CINDEA La Paz
-              </h3>
-              <span className="text-lg text-neutral-300">
-                For CINDEA La Paz, I developed a web-based enrollment system
+            <ProjectDescription
+              projectTitle="Web-Based Enrollment System for CINDEA La Paz"
+              description=" For CINDEA La Paz, I developed a web-based enrollment system
                 using PHP Laravel to streamline the registration process for
                 students. The system was designed to handle complex workflows
                 efficiently, ensuring both functionality and scalability to
@@ -168,12 +152,10 @@ export default function KeyProjects() {
                 processes, and delivering a solution that met tight deadlines
                 ahead of the academic year. This project highlighted my ability
                 to develop robust systems tailored to specific organizational
-                requirements.
-              </span>
-              <div className="flex flex-wrap gap-4 w-full text-right text-base font-semibold">
-                <Button title="View live" link="https://cindealapaz.com/"></Button>
-              </div>
-            </div>
+                requirements."
+              buttonTitle="View live"
+              buttonLink="https://cindealapaz.com/"
+            />
           </div>
           {/* Item */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:place-items-center m-auto">
@@ -184,24 +166,19 @@ export default function KeyProjects() {
               <SiFirebase />
             </Card>
             {/* Description */}
-            <div className="grid content-center gap-5 md:col-span-3">
-              <h3 className="text-xl font-semibold text-amber-500">
-                Uptask – Task Management App
-              </h3>
-              <span className="text-lg text-neutral-300">
-                As part of a university project, I developed Uptask, a task
+            <ProjectDescription
+              projectTitle="Uptask – Task Management App"
+              description="As part of a university project, I developed Uptask, a task
                 management application designed to help users organize and
                 prioritize their to-dos efficiently. The app was built using
                 Android Studio with Java for the frontend and Firebase as the
                 backend, including a NoSQL database and Firebase Authentication
                 for secure user management. Uptask offers a simple yet effective
                 way to track tasks, reflecting my ability to design and
-                implement full-stack solutions tailored to user needs.
-              </span>
-              <div className="flex flex-wrap gap-4 w-full text-right text-base font-semibold">
-                <Button title="View Code" link="https://github.com/FabianFernandezChaves/UpTask"></Button>
-              </div>
-            </div>
+                implement full-stack solutions tailored to user needs."
+              buttonTitle="View code"
+              buttonLink="https://github.com/FabianFernandezChaves/UpTask"
+            />
           </div>
         </section>
       </main>
